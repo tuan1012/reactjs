@@ -1,0 +1,199 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    margin-bottom: 76px;
+    position: relative;
+
+    .content {
+        position: absolute;
+        height: 120%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h1 {
+            font-size: 70px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: $white-cl;
+            padding-bottom: 20px;
+        }
+
+        p {
+            font-size: 22px;
+            color: $white-cl;
+            text-transform: uppercase;
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            padding-bottom: 50px;
+        }
+
+        a {
+            padding: 15px 35px;
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            color: $white-cl;
+            background: #00AFAB;
+            border-radius: 30px;
+            transition: 0.3s;
+
+            &:hover {
+                background: #008683;
+                transition: 0.3s;
+            }
+        }
+    }
+}
+
+.description {
+    position: relative;
+    padding-bottom: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #F4F7F6;
+
+    p {
+        font-size: 28px;
+        line-height: 1.6;
+        width: 50%;
+        margin: 0 auto;
+        text-align: center;
+
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        background: $black-cl;
+        height: 100px;
+        width: 1px;
+        bottom: 0;
+        left: 50%;
+    }
+}
+
+.courses {
+    padding-top: 50px;
+    background: #F4F7F6;
+
+
+    img {
+        cursor: pointer;
+    }
+
+    .online,
+    .offline {
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 75px;
+
+            p:first-child {
+                font-size: 16px;
+                text-transform: uppercase;
+                font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+                padding-bottom: 20px;
+                margin: 0 auto;
+            }
+
+            h3 {
+                font-size: 50px;
+                font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+                padding-bottom: 50px;
+            }
+
+            .course {
+                padding: 10px 15px;
+
+                a {
+                    position: relative;
+                    overflow: hidden;
+
+                    .overlay {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        background: rgba(0, 0, 0, 0.5);
+                        ;
+                    }
+
+                    img {
+                        transition: 0.5s;
+                    }
+
+                    &:hover img {
+                        transform: scale(1.1);
+                        transition: 0.7s;
+                    }
+
+                }
+
+
+                &__content {
+                    padding: 15px 20px;
+                    background: $white-cl;
+
+                    h4 {
+                        font-size: 22px;
+                        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+                        font-weight: bold;
+                        padding-bottom: 8px;
+                    }
+
+                    p {
+                        font-size: 16px;
+                        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+                        color: #838383;
+                    }
+
+                }
+            }
+
+            .online {
+                border-bottom: 1px solid #00AFAB;
+            }
+
+            .offline {
+                padding-top: 100px;
+            }
+
+            .author {
+                display: flex;
+                justify-content: space-between;
+                padding: 10px 0;
+
+                span {
+                    font-size: 16px;
+                    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+                    font-weight: bold;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-right: 1px solid #E0E0E0;
+                    padding-right: 10px;
+                }
+            }
+        }
+
+    }
+
+}
+
+.homework {
+    height: 100vh;
+}
